@@ -12,8 +12,37 @@ PDFtoXML is a specialized document conversion tool that transforms PDF files int
 - Implement secure file processing and storage
 - Ensure high-quality XML output with proper structure
 - Support various PDF formats and layouts
+- Maintain user privacy and data security
 
 ### 💡 Key Features
+
+- **Document Conversion** 📄
+  - PDF to XML conversion with high accuracy
+  - Support for multiple PDF formats
+  - Batch file processing
+  - Custom XML structure configuration
+  - Real-time conversion progress tracking
+  - Download converted files in XML format
+
+- **User Management** 👤
+  - Secure login and logout
+  - User profile management
+  - Password reset functionality
+  - Email verification
+  - Role-based access control
+
+- **History & Tracking** 📊
+  - Conversion history tracking
+  - Download history
+  - File status monitoring
+  - Detailed conversion logs
+  - Export history reports
+  - Advanced search functionality
+    - Search by filename
+    - Search by date range
+    - Search by conversion status
+    - Search by file type
+    - Filter and sort options
 
 - **Frontend (React + Vite)** 🎨
   - Modern UI with Tailwind CSS
@@ -30,6 +59,8 @@ PDFtoXML is a specialized document conversion tool that transforms PDF files int
   - Secure storage and retrieval
   - Progress tracking
   - Error handling and validation
+  - User authentication and authorization
+  - Email service integration
 
 ## 📋 Prerequisites
 
