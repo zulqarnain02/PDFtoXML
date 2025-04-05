@@ -17,34 +17,34 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-router.post("/forgot-password", async (req, res) => {
-  const { email } = req.body;
-  console.log(email);
-  try {
-    const user = await User.findOne({ email });
-    if (!user) return res.status(404).json({ message: "User not found" });
+// router.post("/forgot-password", async (req, res) => {
+//   const { email } = req.body;
+//   console.log(email);
+//   try {
+//     const user = await User.findOne({ email });
+//     if (!user) return res.status(404).json({ message: "User not found" });
 
-    console.log(user);
-    // Generate token
-    const token = crypto.randomBytes(32).toString("hex");
-    user.resetPasswordToken = token;
-    user.resetPasswordExpires = Date.now() + 3600000; // 1 hour from now
-    await user.save();
+//     console.log(user);
+//     // Generate token
+//     const token = crypto.randomBytes(32).toString("hex");
+//     user.resetPasswordToken = token;
+//     user.resetPasswordExpires = Date.now() + 3600000; // 1 hour from now
+//     await user.save();
 
-    const resetLink = `http://localhost:5173/reset-password/${token}`;
+//     const resetLink = `http://localhost:5173/reset-password/${token}`;
 
-    // Send email
-    await transporter.sendMail({
-      to: user.email,
-      subject: "Password Reset",
-      html: `<p>Click <a href="${resetLink}">here</a> to reset your password.</p>`,
-    });
+//     // Send email
+//     await transporter.sendMail({
+//       to: user.email,
+//       subject: "Password Reset",
+//       html: `<p>Click <a href="${resetLink}">here</a> to reset your password.</p>`,
+//     });
 
-    res.status(200).json({ message: "Password reset link sent to your email" });
-  } catch (err) {
-    res.status(500).json({ message: "Something went wrong" });
-  }
-});
+//     res.status(200).json({ message: "Password reset link sent to your email" });
+//   } catch (err) {
+//     res.status(500).json({ message: "Something went wrong" });
+//   }
+// });
 
 
 router.post("/reset-password/:token", async (req, res) => {
