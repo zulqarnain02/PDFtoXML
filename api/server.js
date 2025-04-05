@@ -24,7 +24,13 @@ app.use('/api/auth', registerRoutes);
 app.use('/convert', convertRoutes);
 app.use('/conversion-history', conversionHistoryRoutes);
 
-// Database Connection
+app.get('/', (req,res)=>{
+
+  res.send('Hello World');
+
+})
+
+// Database onnection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB Connected'))
   .catch((error) => console.error('DB Connection Error:', error));
