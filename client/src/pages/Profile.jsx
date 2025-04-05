@@ -1,6 +1,7 @@
 // components/Profile.jsx
 import React, { useEffect, useState } from "react";
 import { User, Mail, Lock, UserCircle } from "lucide-react";
+import { apiurl } from '../api/axios';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -10,7 +11,7 @@ const Profile = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/profile", {
+      const res = await fetch(`${apiurl}/api/auth/profile`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

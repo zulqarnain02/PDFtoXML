@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import axios from "axios";
 import { Upload, ArrowRight, RefreshCw, Copy, Download } from "lucide-react";
+import { apiurl } from '../api/axios';
 
 export default function Home() {
   const [file, setFile] = useState(null);
@@ -61,7 +62,7 @@ export default function Home() {
     try {
       const token = localStorage.getItem("token");
     
-      const response = await fetch("http://localhost:5000/convert", {
+      const response = await fetch(`${apiurl}/convert`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,
