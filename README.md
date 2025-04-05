@@ -1,4 +1,4 @@
-# 📄 PDFtoXML Converter
+![image](https://github.com/user-attachments/assets/062b6d20-19f6-47d7-bf26-6c64bd88ebe6)![image](https://github.com/user-attachments/assets/2b5f1b05-c809-42c2-bc70-cdc771297cf4)# 📄 PDFtoXML Converter
 
 A powerful full-stack application that converts PDF documents to XML format, featuring a modern React frontend and Node.js backend with advanced document processing capabilities.
 
@@ -17,32 +17,27 @@ PDFtoXML is a specialized document conversion tool that transforms PDF files int
 ### 💡 Key Features
 
 - **Document Conversion** 📄
-  - PDF to XML conversion with high accuracy
+  - PDF to XML conversion with high accuracy using PDF.co API
   - Support for multiple PDF formats
   - Batch file processing
   - Custom XML structure configuration
   - Real-time conversion progress tracking
   - Download converted files in XML format
+  - Integration with PDF.co for reliable conversion
 
 - **User Management** 👤
   - Secure login and logout
   - User profile management
   - Password reset functionality
   - Email verification
-  - Role-based access control
 
 - **History & Tracking** 📊
   - Conversion history tracking
-  - Download history
-  - File status monitoring
-  - Detailed conversion logs
   - Export history reports
+  - Download PDF and XML from the History
   - Advanced search functionality
     - Search by filename
     - Search by date range
-    - Search by conversion status
-    - Search by file type
-    - Filter and sort options
 
 - **Frontend (React + Vite)** 🎨
   - Modern UI with Tailwind CSS
@@ -67,6 +62,7 @@ PDFtoXML is a specialized document conversion tool that transforms PDF files int
 - Node.js (v18 or higher)
 - MongoDB
 - npm or yarn
+- PDF.co API key (for PDF to XML conversion)
 
 ## 🛠️ Installation
 
@@ -92,8 +88,20 @@ npm install
 MONGODB_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email
-EMAIL_PASS=your_email_password
+EMAIL_PASSWORD=your_email_password
+PDF_TO_XML_KEY=your_generated_key_from_PDF.co
 ```
+
+## 🔧 PDF.co Setup
+
+1. Sign up for a PDF.co account at [https://pdf.co](https://pdf.co)
+2. Generate your API key from the dashboard
+3. Add the API key to your `.env` file as `PDF_TO_XML_KEY`
+4. The application will use PDF.co's reliable conversion service for:
+   - High-quality PDF to XML conversion
+   - Batch processing capabilities
+   - Secure file handling
+   - Consistent output format
 
 ## 🚀 Running the Application
 
@@ -115,7 +123,14 @@ The application will be available at:
 
 ## 📸 Screenshots
 
-[Add your application screenshots here]
+![image](https://github.com/user-attachments/assets/21055cb6-694a-4e1b-915a-bccac3ea2d62)
+![image](https://github.com/user-attachments/assets/46ed4185-59d1-4abf-bd56-2d5426364a4a)
+![image](https://github.com/user-attachments/assets/27cb939b-e180-49ca-9813-cb89c9e2ecc8)  ![image](https://github.com/user-attachments/assets/67ddc5d4-adaa-4c3a-9de2-6455befe12e4)
+![image](https://github.com/user-attachments/assets/455874ef-6704-4b48-af6d-422fe9e252b9)
+
+
+
+
 
 ## 🛠️ Tech Stack
 
