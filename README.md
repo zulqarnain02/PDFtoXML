@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/062b6d20-19f6-47d7-bf26-6c64bd88ebe6)![image](https://github.com/user-attachments/assets/2b5f1b05-c809-42c2-bc70-cdc771297cf4)# 📄 PDFtoXML Converter
+# 📄 PDFtoXML Converter
 
 A powerful full-stack application that converts PDF documents to XML format, featuring a modern React frontend and Node.js backend with advanced document processing capabilities.
 
@@ -24,6 +24,7 @@ PDFtoXML is a specialized document conversion tool that transforms PDF files int
   - Real-time conversion progress tracking
   - Download converted files in XML format
   - Integration with PDF.co for reliable conversion
+  - Support different Media(media friendly)
 
 - **User Management** 👤
   - Secure login and logout
@@ -127,6 +128,12 @@ The application will be available at:
 ![image](https://github.com/user-attachments/assets/46ed4185-59d1-4abf-bd56-2d5426364a4a)
 ![image](https://github.com/user-attachments/assets/27cb939b-e180-49ca-9813-cb89c9e2ecc8)  ![image](https://github.com/user-attachments/assets/67ddc5d4-adaa-4c3a-9de2-6455befe12e4)
 ![image](https://github.com/user-attachments/assets/455874ef-6704-4b48-af6d-422fe9e252b9)
+![image](https://github.com/user-attachments/assets/3947b54e-c32a-42e7-8538-ea50bc442ed8)
+![image](https://github.com/user-attachments/assets/5be0907b-ef7c-4b7b-b31f-c492d5214e48)
+![image](https://github.com/user-attachments/assets/7b5fb163-9ec9-48d6-9ebd-5a636ea277ed)
+![image](https://github.com/user-attachments/assets/b9a18214-0644-403e-be85-08c9db43e35f)
+![image](https://github.com/user-attachments/assets/0131af6e-da08-4773-9230-f64f0ab54ee5)
+![image](https://github.com/user-attachments/assets/a146e190-85ef-4518-9eb2-11d89b5a1a08)
 
 
 
