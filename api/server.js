@@ -10,6 +10,7 @@ const authRoutes = require('./routes/auth');
 const registerRoutes = require('./routes/Register');
 const convertRoutes = require('./routes/convert'); // Import the new convert route
 const conversionHistoryRoutes = require('./routes/conversionHistory');
+const profileRoutes = require('./routes/profile');
 
 const app = express();
 
@@ -23,12 +24,13 @@ app.use('/api/auth', authRoutes);
 app.use('/api/auth', registerRoutes);
 app.use('/convert', convertRoutes);
 app.use('/conversion-history', conversionHistoryRoutes);
+app.use('/api/auth', profileRoutes);
 
-app.get('/', (req,res)=>{
+// app.get('/', (req,res)=>{
 
-  res.send('Hello World');
+//   res.send('Hello World');
 
-})
+// })
 
 // Database onnection
 mongoose.connect(process.env.MONGO_URI)

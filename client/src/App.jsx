@@ -7,6 +7,7 @@ import ResetPassword from "./components/ResetPassword";
 import Navbar from "./components/Navbar"; // Import Navbar
 import Footer from "./components/Footer"; // Import Footer
 import ConvertedFilesHistory from "./pages/ConvertedFilesHistory";
+import Profile from "./pages/Profile";
 
 function Layout({ children }) {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
           <Route path="/conversion-history" element={<ConvertedFilesHistory/>}/>
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
         </Routes>
