@@ -31,6 +31,7 @@ router.post("/forgot-password", async (req, res) => {
     user.resetPasswordExpires = Date.now() + 3600000; // 1 hour from now
     await user.save();
 
+    // const resetLink = `http://localhost:5173/reset-password/${token}`;
     const resetLink = `https://pdftoxml-app.onrender.com/reset-password/${token}`;
 
     // Send email
