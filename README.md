@@ -166,6 +166,7 @@ This project is licensed under the ISC License.
 ## 👥 Author
 
 MOHAMMED ZULQARNAIN
+
 📧 Email: [zulqarnain4292@gmail.com](mailto:zulqarnain4292@gmail.com)
 
 ## 🤝 Contributing
