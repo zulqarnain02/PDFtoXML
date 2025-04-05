@@ -69,7 +69,7 @@ PDFtoXML is a specialized document conversion tool that transforms PDF files int
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/zulqarnain02/PDFtoXML.git
 ```
 
 2. Install backend dependencies:
