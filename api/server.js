@@ -14,6 +14,8 @@ const profileRoutes = require('./routes/profile');
 
 const app = express();
 
+
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
@@ -26,11 +28,9 @@ app.use('/convert', convertRoutes);
 app.use('/conversion-history', conversionHistoryRoutes);
 app.use('/api/auth', profileRoutes);
 
-// app.get('/', (req,res)=>{
-
-//   res.send('Hello World');
-
-// })
+app.get('/', (req,res)=>{
+  res.send('Hello World');
+})
 
 // Database onnection
 mongoose.connect(process.env.MONGO_URI)
