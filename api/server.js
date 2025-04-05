@@ -29,7 +29,11 @@ app.use('/conversion-history', conversionHistoryRoutes);
 app.use('/api/auth', profileRoutes);
 
 app.get('/', (req,res)=>{
-  res.send('Hello World');
+  res.json('Hello World');
+})
+
+app.get('/test', (req,res)=>{
+  res.status(200).json('Test successfull!!!');
 })
 
 // Database onnection
