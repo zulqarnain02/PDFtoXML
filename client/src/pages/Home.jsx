@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { Upload, ArrowRight, RefreshCw, Copy, Download } from "lucide-react";
 import { apiurl } from '../api/axios';
@@ -12,7 +12,17 @@ export default function Home() {
   const [xmlContent, setXmlContent] = useState(null);
   const [xmlFileName, setXmlFileName] = useState("");
   const fileInputRef = useRef(null);
+  const navigate = useNavigate();
 
+
+  // 🔐 Redirect to /login if not authenticated
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login", { replace: true });
+    }
+  }, [navigate]);
+  
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       setFile(e.target.files[0]);
