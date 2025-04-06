@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Upload, ArrowRight, RefreshCw, Copy, Download } from "lucide-react";
 import { apiurl } from '../api/axios';
@@ -22,7 +23,7 @@ export default function Home() {
       navigate("/login", { replace: true });
     }
   }, [navigate]);
-  
+
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       setFile(e.target.files[0]);
