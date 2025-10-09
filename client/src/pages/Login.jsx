@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "../api/axios";
 
 
@@ -7,9 +8,17 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false); // Add loading state
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/home", { replace: true });
+    }
+  }, [navigate]);
 
   const handleForgotPassword=()=>{
-    window.location.href = "/forgot-password";
+    navigate("/forgot-password");
   }
   const handleSubmit = async (e) => {
     // Make this function async
@@ -26,7 +35,7 @@ const Login = () => {
       const response = await axios.post("/login", { email, password });
       const token = response.data.token;
       localStorage.setItem("token", token); // Save token to localStorage
-      window.location.href = "/home";
+      navigate("/home");
     } catch (error) {
       setError(error.response?.data?.message || "Login failed");
     } finally {

@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
@@ -8,6 +14,22 @@ import Navbar from "./components/Navbar"; // Import Navbar
 import Footer from "./components/Footer"; // Import Footer
 import ConvertedFilesHistory from "./pages/ConvertedFilesHistory";
 import Profile from "./pages/Profile";
+import { useEffect } from "react";
+
+function Root() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/home", { replace: true });
+    } else {
+      navigate("/login", { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+}
 
 function Layout({ children }) {
   const location = useLocation();
@@ -32,6 +54,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
+          <Route path="/" element={<Root />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
